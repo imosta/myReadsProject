@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ShelfSelector = ({ onMoveBook, book }) => {
   const optionHandler = (event) => {
     onMoveBook(book, event.target.value);
@@ -20,4 +22,8 @@ const ShelfSelector = ({ onMoveBook, book }) => {
   );
 };
 
+ShelfSelector.propTypes = {
+  book: PropTypes.object.isRequired,
+  onMoveBook: PropTypes.func.isRequired,
+};
 export default ShelfSelector;

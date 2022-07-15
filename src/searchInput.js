@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const SearchInput = ({ handleQuery, query }) => {
   return (
@@ -15,6 +16,11 @@ const SearchInput = ({ handleQuery, query }) => {
       </div>
     </div>
   );
+};
+
+SearchInput.propTypes = {
+  handleQuery: PropTypes.func.isRequired,
+  query: PropTypes.string.isRequired,
 };
 
 export default SearchInput;

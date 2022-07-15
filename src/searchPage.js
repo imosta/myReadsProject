@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import * as booksAPI from "./BooksAPI";
 import Book from "./book";
 import SearchInput from "./searchInput";
@@ -50,6 +51,11 @@ const SearchPage = ({ books, onMoveBook }) => {
       </div>
     </div>
   );
+};
+
+SearchPage.propTypes = {
+  books: PropTypes.array.isRequired,
+  onMoveBook: PropTypes.func.isRequired,
 };
 
 export default SearchPage;
